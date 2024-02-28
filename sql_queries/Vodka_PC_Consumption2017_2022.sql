@@ -1,30 +1,24 @@
+/*
+
+Query to generate per capita vodka consumption from liquor sales data for years 2017 to 2022..
+Unfortunately, I could not optimize the create table statement further due to the large volume of data. 
+Batch processing was attempted, but resulted in crashing connection. However, the current file runs in
+less than 27 seconds and produces correct results.
+
+*/
+
+
+-- create table displaying only vodka sales
+
 USE ia_liquor;
-
-DROP PROCEDURE IF EXISTS drop_vodka_sales_if_exists;
-
-DELIMITER //
-
-CREATE PROCEDURE drop_vodka_sales_if_exists()
-BEGIN
-  DECLARE table_exists BOOLEAN;
-
-  SELECT EXISTS(SELECT 1 FROM information_schema.tables WHERE table_name = 'vodka_sales_2017_to_2022') INTO table_exists;
-
-  IF table_exists THEN
-    ALTER TABLE `vodka_sales_2017_to_2022` DROP CONSTRAINT `fk_population_data`;
-    DROP TABLE `vodka_sales_2017_to_2022`;
-  END IF;
-END;
-
-CALL drop_vodka_sales_if_exists();
 
 CREATE TABLE vodka_sales_2017_to_2022 AS
 SELECT
     County_Number,
     County,
     YEAR(Date) AS Year,
-    Round(SUM(Sale_Dollars), 2) AS Total_Sales,
-    Round(SUM(Volume_Sold_Liters), 2) AS Total_Volume_Sold_Liters
+    Round(SUM(Sale_Dollars), 2) AS Total_Sales, -- total sales dollars column
+    Round(SUM(Volume_Sold_Liters), 2) AS Total_Volume_Sold_Liters -- total sales in liters column
 FROM (
     SELECT
         County_Number,
@@ -35,7 +29,7 @@ FROM (
     FROM liquor_sales_2017
     WHERE Vodka = 1
 
-    UNION ALL
+    UNION ALL -- union all statements combining different years
 
     SELECT
         County_Number,
@@ -90,12 +84,11 @@ FROM (
     FROM liquor_sales_2022
     WHERE Vodka = 1
 
-    
-) AS combined_sales
+)  as combined_sales
 GROUP BY
     County_Number, County, Year
 ORDER BY
-    Total_Sales DESC;
+    County_Number, Year;
     
 
 -- NOTE no county population data for 2023 yet
