@@ -8,6 +8,8 @@
 - [x] Merge newly cleaned data with original cleaned data
 - [x] Separate remaining data into csv for later cleaning
 - [x] Prepare Yearly Iowa County Population Data for per capita consumption anaylsis
+- [ ] Improve markdown clarity
+- [ ] retesting measures
 
 ### SQL Database
 - [x] Establish connection between Linux environment and local MySQL Desktop
@@ -23,7 +25,7 @@
 
 1. [Project Description](#project-description)
 2. [Example Visualizations](#visuals)
-3. [Links](#links)
+3. [Other Data Links](#links)
 
 <a name="project-description"></a>
 ## Project Description
@@ -34,4 +36,14 @@ This dataset was very large at 27489743 values. Upon downloading the data, over 
 
 
 
+<a name="visuals"></a>
+## Visualizations
 
+Example dashboard images will be added here. 
+
+<a name="links"></a>
+## Other Data Links
+
+1. [Iowa County Population Data](https://data.iowa.gov/Community-Demographics/County-Population-in-Iowa-by-Year/qtnr-zsrc/explore/query/SELECT%0A%20%20%60fips%60%2C%0A%20%20%60geographicname%60%2C%0A%20%20%60year%60%2C%0A%20%20%60population%60%2C%0A%20%20%60primary_point%60%2C%0A%20%20%60%3A%40computed_region_hhz5_dst4%60%2C%0A%20%20%60%3A%40computed_region_y683_txed%60%2C%0A%20%20%60%3A%40computed_region_g8ff_h7ce%60/page/filter)
+2. [Iowa Populated Places](https://geodata.iowa.gov/datasets/iowa-populated-places/explore)
+3. [Active and Inactive Iowa Liquor Stores](https://data.iowa.gov/Regulation/Iowa-Liquor-Stores/ykb6-ywnd/about_data)
