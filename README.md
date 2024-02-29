@@ -26,6 +26,7 @@
 3. [Links](#links)
 
 <a name="project-description"></a>
+## Project Description
 
 The goal of this project was to clean and analyze a large publicly available dataset using techniques in Python, SQL, and Tableau. For this endeavor, I chose the [Sales Data from Iowa Class “E” liquor licensees](https://data.iowa.gov/Sales-Distribution/Iowa-Liquor-Sales/m3tr-qhgy/about_data) dataset from data.iowa.gov, which details all the liquor sales in Iowa from January 2012 through the end of September 2023, since I downloaded this data in early November of 2023. 
 
