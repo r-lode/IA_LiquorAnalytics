@@ -17,9 +17,9 @@
 - [x] Extract data subsets as .txt files to for dashboard building in Tableau
 
 ### Dashboard Building
-- [ ] County Per Capita Consumption Visualization Completed
-- [ ] Other visualizations to be determined
-- [ ] Publish Dashboards
+- [x] County Per Capita Consumption Visualization Completed
+- [x] Other visualizations to be determined
+- [x] Publish Dashboards
 
 ## Table of Contents
 
@@ -40,11 +40,25 @@ This dataset was very large at 27489743 values. Upon downloading the data, over 
 <a name="visuals"></a>
 ## Visualizations
 
-Example dashboard images will be added here. 
+
+The first visualization I built was a simple line chart showing sales by month. From this, we can see a general seasonal trend of higher in sales in the summer, but lower sales in the winter.
+
+![Monthly Sales](./dashboard_samples/MonthlyVodkaSales.jpg)
+
+I also built a map showing average per capita consumption (in liters) across Iowa counties. Interestingly, Dickinson county had by far the highest rate of any county. Having spent a lot of time at the lakes growing up, I'm fairly certain the huge boating/party scene on Okoboji/Spirit Lake has a big impact on this value.
+
+![Per Capita](./dashboard_samples/PerCapitaConsumption.jpg)
+
+You can also check out this additional map showing the sales volume by locations in Iowa. Each dot represents a different store location with bigger circles indicating a higher number of sales.
+
+
+![Map Sales](./dashboard_samples/Geovisualization.jpg)
+
 
 <a name="links"></a>
 ## Other Data Links
 
-1. [Iowa County Population Data](https://data.iowa.gov/Community-Demographics/County-Population-in-Iowa-by-Year/qtnr-zsrc/explore/query/SELECT%0A%20%20%60fips%60%2C%0A%20%20%60geographicname%60%2C%0A%20%20%60year%60%2C%0A%20%20%60population%60%2C%0A%20%20%60primary_point%60%2C%0A%20%20%60%3A%40computed_region_hhz5_dst4%60%2C%0A%20%20%60%3A%40computed_region_y683_txed%60%2C%0A%20%20%60%3A%40computed_region_g8ff_h7ce%60/page/filter)
-2. [Iowa Populated Places](https://geodata.iowa.gov/datasets/iowa-populated-places/explore)
-3. [Active and Inactive Iowa Liquor Stores](https://data.iowa.gov/Regulation/Iowa-Liquor-Stores/ykb6-ywnd/about_data)
+1. [Link to Dashboard](https://public.tableau.com/app/profile/ryan.lode2771/viz/VodkaSalesMetricsforIowa2017-2022/VodkaConsumptioninIowa2017-2022)
+2. [Iowa County Population Data](https://data.iowa.gov/Community-Demographics/County-Population-in-Iowa-by-Year/qtnr-zsrc/explore/query/SELECT%0A%20%20%60fips%60%2C%0A%20%20%60geographicname%60%2C%0A%20%20%60year%60%2C%0A%20%20%60population%60%2C%0A%20%20%60primary_point%60%2C%0A%20%20%60%3A%40computed_region_hhz5_dst4%60%2C%0A%20%20%60%3A%40computed_region_y683_txed%60%2C%0A%20%20%60%3A%40computed_region_g8ff_h7ce%60/page/filter)
+3. [Iowa Populated Places](https://geodata.iowa.gov/datasets/iowa-populated-places/explore)
+4. [Active and Inactive Iowa Liquor Stores](https://data.iowa.gov/Regulation/Iowa-Liquor-Stores/ykb6-ywnd/about_data)
