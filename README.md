@@ -8,8 +8,8 @@
 - [x] Merge newly cleaned data with original cleaned data
 - [x] Separate remaining data into csv for later cleaning
 - [x] Prepare Yearly Iowa County Population Data for per capita consumption anaylsis
-- [ ] Improve markdown clarity
-- [ ] retesting measures
+- [x] Improve markdown clarity
+- [x] retesting measures
 
 ### SQL Database
 - [x] Establish connection between Linux environment and local MySQL Desktop
